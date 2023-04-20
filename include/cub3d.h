@@ -6,7 +6,7 @@
 /*   By: jijoo <jijoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 18:04:06 by jijoo             #+#    #+#             */
-/*   Updated: 2023/04/19 19:14:45 by jijoo            ###   ########.fr       */
+/*   Updated: 2023/04/20 18:10:57 by jijoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,31 @@ typedef struct s_map
 	int		ceiling_color[3];
 	int		direction;
 	int		position[2];
-	char	*map;
+	char	*buffer;
+	char	**map_split;
+	int		**map;
+	int		map_width;
+	int		map_height;
 }	t_map;
 
+int	free_map(t_map *cub);
+int	top_bot(t_map *cub);
+int	map_end(t_map *cub);
+int	make_buffer(int fd, t_map *cub);
+
+int	free_color(char *line, char *color_line, char **color_split, int flag);
+int	floor_color(char *line, t_map *cub);
+int	ceiling_color(char *line, t_map *cub);
+int	fc_color(int fd, t_map *cub);
+
+int	print_error(int fd);
+int	len_split(char **s);
+int	free_lines(char *l, char **s, int er);
+int	file_extension(int argc, char **argv);
+
+int	map_valid(int fd, t_map *cub);
+int	texture(int fd, t_map *cub);
+int	texture2(int fd, t_map *cub);
+int	texture3(int fd, t_map *cub);
+int	texture4(int fd, t_map *cub);
 #endif

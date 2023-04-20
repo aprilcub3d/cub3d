@@ -6,7 +6,7 @@
 /*   By: jijoo <jijoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 17:51:45 by jijoo             #+#    #+#             */
-/*   Updated: 2023/04/19 19:43:33 by jijoo            ###   ########.fr       */
+/*   Updated: 2023/04/20 15:56:47 by jijoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	*ft_bu(char *line)
 
 char	*get_next_line(int fd)
 {
-	static char *backup;
+	static char	*backup;
 	char		*line;
 
 	line = ft_line(fd, backup);

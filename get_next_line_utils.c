@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jijoo <jijoo@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: jijoo <jijoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 17:45:58 by jijoo             #+#    #+#             */
-/*   Updated: 2022/07/24 22:43:32 by jijoo            ###   ########.fr       */
+/*   Updated: 2023/04/20 15:56:38 by jijoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 char	*ft_strdup(const char *src)
 {
-	char	*dst;
-	unsigned long   len;
-	unsigned long   i;
+	char			*dst;
+	unsigned long	len;
+	unsigned long	i;
 
 	len = 0;
 	while (src[len])
@@ -70,7 +70,6 @@ char	*ft_strdup(const char *src)
 		i++;
 	}
 	dst[i] = 0;
-	//free((char *)src);
 	return (dst);
 }
 

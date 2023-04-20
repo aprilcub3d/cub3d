@@ -6,7 +6,7 @@
 /*   By: jijoo <jijoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 21:00:56 by jijoo             #+#    #+#             */
-/*   Updated: 2023/04/19 20:25:28 by jijoo            ###   ########.fr       */
+/*   Updated: 2023/04/20 17:26:38 by jijoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int		ft_atoi(const char *str);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
+size_t	ft_strcat(char *dest, const char *src);
 
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);

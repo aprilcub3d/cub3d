@@ -8,7 +8,11 @@ LIBFT = libft/libft.a
 
 SRCS = main.c \
 	get_next_line.c \
-	get_next_line_utils.c
+	get_next_line_utils.c \
+	texture.c \
+	utils1.c \
+	floor_ceiling.c \
+	map_check.c
 
 MLX = ./minilibx-linux
 LIB = ./libft
@@ -33,7 +37,8 @@ fclean: clean
 	rm -rf $(NAME)
 	make fclean -C $(LIB)
 
-re: make fclean
+re:
+	make fclean
 	make all
 
 .PHONY: all clean fclean re
