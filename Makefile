@@ -12,7 +12,8 @@ SRCS = main.c \
 	texture.c \
 	utils1.c \
 	floor_ceiling.c \
-	map_check.c
+	map_check.c \
+	mapping.c
 
 MLX = ./minilibx-linux
 LIB = ./libft
