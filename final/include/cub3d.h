@@ -19,7 +19,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <mlx.h>
+# include "../mlx/mlx.h"
 # include <fcntl.h>
 
 typedef struct s_map
@@ -38,8 +38,12 @@ typedef struct s_map
 	int		**map;
 	int		map_width;
 	int		map_height;
+	int		config_box[6];
 }	t_map;
 
+void    config_init(t_map *cub);
+int 	config_fin(t_map *cub);
+int		config(int fd, t_map *cub);
 int		texture_err(t_map *cub);
 int		numbering(char c);
 void	mapping(t_map *cub);
@@ -59,9 +63,9 @@ int		map_end(t_map *cub);
 int		make_buffer(int fd, t_map *cub);
 int		map_check(t_map *cub);
 
-int		free_color(char *line, char *color_line, char **color_split, int flag);
-int		floor_color(char *line, t_map *cub);
-int		ceiling_color(char *line, t_map *cub);
+int		free_color(char *line, char **split, char *color_line, char **color_split);
+int		floor_color(char *line, char **split, t_map *cub);
+int		ceiling_color(char *line, char **split, t_map *cub);
 int		fc_color(int fd, t_map *cub);
 
 int		print_error(int fd);
@@ -70,10 +74,10 @@ int		free_lines(char *l, char **s, int er);
 int		file_extension(int argc, char **argv);
 
 int		map_valid(int fd, t_map *cub);
-int		texture(int fd, t_map *cub);
-int		texture2(int fd, t_map *cub);
-int		texture3(int fd, t_map *cub);
-int		texture4(int fd, t_map *cub);
+int		texture(char *line, char **split, t_map *cub);
+int		texture2(char *line, char **split, t_map *cub);
+int		texture3(char *line, char **split, t_map *cub);
+int		texture4(char *line, char **split, t_map *cub);
 
 int		make_window(t_map *cub);
 #endif

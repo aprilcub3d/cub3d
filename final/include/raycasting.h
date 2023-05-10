@@ -16,7 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>
-# include "mlx.h"
+//# include "mlx.h"
 # include "cub3d.h"
 
 # define W_WIDTH    670

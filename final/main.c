@@ -25,11 +25,7 @@ int	file_extension(int argc, char **argv)
 
 int	map_valid(int fd, t_map *cub)
 {
-	if (texture(fd, cub))
-		return (free_path(cub));
 	if (texture_err(cub))
-		return (free_path(cub));
-	if (fc_color(fd, cub))
 		return (free_path(cub));
 	if (make_buffer(fd, cub))
 		return (free_path(cub));
@@ -79,8 +75,11 @@ int	main(int argc, char *argv[])
 	if (fd == -1)
 		return (print_error(-1));
 	cub.buffer_size = get_size(argv[1]);
+	config_init(&cub);
+	if (config(fd, &cub))
+		exit(print_error(fd));
 	if (map_valid(fd, &cub))
-		return (print_error(fd));
+		exit(print_error(fd));
 	close(fd);
 	if (make_window(&cub))
 		flag = print_error(0);

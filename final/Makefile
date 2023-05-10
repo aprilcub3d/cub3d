@@ -11,16 +11,18 @@ SRCS = main.c \
 	get_next_line_utils.c \
 	texture.c \
 	utils1.c \
+	utils2.c \
 	floor_ceiling.c \
 	map_check.c \
 	mapping.c \
+	free.c
 	dda.c \
 	draw.c \
 	init.c \
 	keyhook.c \
 	minimap.c \
 	window.c	\
-	free.c
+
 
 MLX = ./mlx
 LIB = ./libft
@@ -30,6 +32,8 @@ all: $(NAME)
 
 $(NAME):$(OBJS) $(MLX) $(LIBFT) $(HEADER)
 	$(CC) $(CFLAGS) $(MLXFLAG) $(LIBFT) $(OBJS) -o $(NAME)
+#$(NAME):$(OBJS) $(LIBFT) $(HEADER)
+#	$(CC) $(CFLAGS) $(OBJS) $(LIBFT)  -o $(NAME)
 
 $(LIBFT):
 	make -C libft
