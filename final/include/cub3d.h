@@ -6,7 +6,7 @@
 /*   By: jijoo <jijoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 18:04:06 by jijoo             #+#    #+#             */
-/*   Updated: 2023/05/08 20:34:42 by jijoo            ###   ########.fr       */
+/*   Updated: 2023/05/12 05:49:21 by jijoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ typedef struct s_map
 	int		config_box[6];
 }	t_map;
 
-void    config_init(t_map *cub);
-int 	config_fin(t_map *cub);
+void	config_init(t_map *cub);
+int		config_fin(t_map *cub);
 int		config(int fd, t_map *cub);
 int		texture_err(t_map *cub);
 int		numbering(char c);
@@ -63,7 +63,8 @@ int		map_end(t_map *cub);
 int		make_buffer(int fd, t_map *cub);
 int		map_check(t_map *cub);
 
-int		free_color(char *line, char **split, char *color_line, char **color_split);
+int		free_color(char *line, char **split, char *color_line, \
+		char **color_split);
 int		floor_color(char *line, char **split, t_map *cub);
 int		ceiling_color(char *line, char **split, t_map *cub);
 int		fc_color(int fd, t_map *cub);
