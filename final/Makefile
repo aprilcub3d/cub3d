@@ -15,7 +15,7 @@ SRCS = main.c \
 	floor_ceiling.c \
 	map_check.c \
 	mapping.c \
-	free.c
+	free.c \
 	dda.c \
 	draw.c \
 	init.c \
@@ -32,8 +32,6 @@ all: $(NAME)
 
 $(NAME):$(OBJS) $(MLX) $(LIBFT) $(HEADER)
 	$(CC) $(CFLAGS) $(MLXFLAG) $(LIBFT) $(OBJS) -o $(NAME)
-#$(NAME):$(OBJS) $(LIBFT) $(HEADER)
-#	$(CC) $(CFLAGS) $(OBJS) $(LIBFT)  -o $(NAME)
 
 $(LIBFT):
 	make -C libft

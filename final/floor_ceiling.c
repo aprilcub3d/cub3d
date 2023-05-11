@@ -6,7 +6,7 @@
 /*   By: jijoo <jijoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 16:01:52 by jijoo             #+#    #+#             */
-/*   Updated: 2023/04/20 16:53:28 by jijoo            ###   ########.fr       */
+/*   Updated: 2023/05/12 05:33:16 by jijoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int	ceiling_color(char *line, char **split, t_map *cub)
 	char	*color_line;
 	char	**color_split;
 	int		i;
-
 
 	color_line = ft_strdup(line + 2);
 	color_split = ft_split(color_line, ',');

@@ -6,7 +6,7 @@
 /*   By: jijoo <jijoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 18:11:07 by jijoo             #+#    #+#             */
-/*   Updated: 2023/05/08 20:35:26 by jijoo            ###   ########.fr       */
+/*   Updated: 2023/05/12 05:32:06 by jijoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	file_extension(int argc, char **argv)
 
 int	map_valid(int fd, t_map *cub)
 {
+	cub->map = NULL;
 	if (texture_err(cub))
 		return (free_path(cub));
 	if (make_buffer(fd, cub))
